@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.autoCode.install.dao.RegMethodDao" >
+    <resultMap id="r_RegMethod" type="RegMethod" >
+        <result column="REG_TYPE" property="regType" jdbcType="VARCHAR" />
+        <result column="METHOD_NAME" property="methodName" jdbcType="VARCHAR" />
+        <result column="PARAM_IN" property="paramIn" jdbcType="VARCHAR" />
+        <result column="PARAM_OUT" property="paramOut" jdbcType="VARCHAR" />
+        <result column="PARAM_IN_REMARK" property="paramInRemark" jdbcType="VARCHAR" />
+        <result column="PARAM_OUT_REMARK" property="paramOutRemark" jdbcType="VARCHAR" />
+        <result column="REG_NAME" property="regName" jdbcType="VARCHAR" />
+        <result column="REG_TIME" property="regTime" jdbcType="TIMESTAMP" />
+        <result column="REG_ID" property="regId" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="insertRegMethod" statementType="CALLABLE" parameterType="RegMethod" >
+        <!-- 添加一条RegMethod的数据 -->
+        {call P_SYS_REG_METHOD_INST (
+            #{regId,jdbcType=VARCHAR,mode=INOUT},
+            #{regType,jdbcType=VARCHAR,mode=IN},
+            #{methodName,jdbcType=VARCHAR,mode=IN},
+            #{paramIn,jdbcType=VARCHAR,mode=IN},
+            #{paramOut,jdbcType=VARCHAR,mode=IN},
+            #{paramInRemark,jdbcType=VARCHAR,mode=IN},
+            #{paramOutRemark,jdbcType=VARCHAR,mode=IN},
+            #{regName,jdbcType=VARCHAR,mode=IN},
+            #{returnFlag,jdbcType=INTEGER,mode=OUT},
+            #{returnMsg,jdbcType=VARCHAR,mode=OUT}
+        )}
+    </select>
+
+    <select id="selectRegMethodPage" statementType="CALLABLE" parameterType="map" >
+        <!-- 获取RegMethod分页-->
+        {call P_SYS_REG_METHOD_SEL_PAGE (
+            #{pageSize,jdbcType=INTEGER,mode=IN},
+            #{pageIndex,jdbcType=INTEGER,mode=IN},
+            #{methodName,jdbcType=VARCHAR,mode=IN},
+            #{count,jdbcType=INTEGER,mode=OUT},
+            #{result,jdbcType=CURSOR,mode=OUT,javaType=ResultSet,resultMap=r_RegMethod}
+        )}
+    </select>
+    
+    <select id="updateRegMethod" statementType="CALLABLE" parameterType="RegMethod" >
+        <!-- 修改一条RegMethod的数据 -->
+        {call P_SYS_REG_METHOD_UPD (
+            #{methodName,jdbcType=VARCHAR,mode=IN},
+            #{newMethodName,jdbcType=VARCHAR,mode=IN},
+            #{paramIn,jdbcType=VARCHAR,mode=IN},
+            #{paramOut,jdbcType=VARCHAR,mode=IN},
+            #{paramInRemark,jdbcType=VARCHAR,mode=IN},
+            #{paramOutRemark,jdbcType=VARCHAR,mode=IN},
+            #{regName,jdbcType=VARCHAR,mode=IN},
+            #{returnFlag,jdbcType=INTEGER,mode=OUT},
+            #{returnMsg,jdbcType=VARCHAR,mode=OUT}
+        )}
+    </select>
+    
+    <select id="deleteRegMethod" statementType="CALLABLE" parameterType="RegMethod" >
+        <!-- 删除一条RegMethod的数据 -->
+        {call P_SYS_REG_METHOD_DEL(
+            #{methodName,jdbcType=VARCHAR,mode=IN},
+            #{returnFlag,jdbcType=INTEGER,mode=OUT},
+            #{returnMsg,jdbcType=VARCHAR,mode=OUT}
+        )}
+    </select>
+    
+     <select id="selectRegMethod" statementType="CALLABLE" parameterType="RegMethod" >
+        <!-- 获取一条RegMethod的数据 -->
+        {call P_SYS_REG_METHOD_SEL ( 
+            #{regId,jdbcType=VARCHAR,mode=IN},
+            #{methodName,jdbcType=VARCHAR,mode=OUT},
+            #{regType,jdbcType=VARCHAR,mode=OUT},
+            #{paramIn,jdbcType=VARCHAR,mode=OUT},
+            #{paramOut,jdbcType=VARCHAR,mode=OUT},
+            #{paramInRemark,jdbcType=VARCHAR,mode=OUT},
+            #{paramOutRemark,jdbcType=VARCHAR,mode=OUT},
+            #{regName,jdbcType=VARCHAR,mode=OUT},
+            #{regTime,jdbcType=,mode=TIMESTAMP}
+        )}
+    </select>
+
+</mapper>

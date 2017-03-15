@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.autoCode.install.dao.ApiDetailDao" >
+    <resultMap id="r_ApiDetail" type="ApiDetail" >
+        <id column="API_DETAIL_ID" property="apiDetailId" jdbcType="VARCHAR" />
+        <result column="API_INFO_ID" property="apiInfoId" jdbcType="VARCHAR" />
+        <result column="API_DETAIL_NAME_CN" property="apiDetailNameCN" jdbcType="VARCHAR" />
+        <result column="API_DETAIL_NAME_EN" property="apiDetailNameEN" jdbcType="VARCHAR" />
+        <result column="API_DETAIL_PARAM_TYPE" property="apiDetailParamType" jdbcType="VARCHAR" />
+        <result column="API_DETAIL_DATA_TYPE" property="apiDetailDataType" jdbcType="VARCHAR" />
+      	<result column="API_DETAIL_NULLABLE" property="apiDetailNullable" jdbcType="VARCHAR" />
+      	<result column="API_DETAIL_REMARK" property="apiDetailRemark" jdbcType="VARCHAR" />
+      	<result column="DATA_TYPE_ID" property="dataTypeId" jdbcType="VARCHAR" />
+    </resultMap>
+    
+    <select id="selectApiDetail" parameterType="map" statementType="CALLABLE">
+        {call P_API_DETAIL_SEL (
+			#{apiInfoUrl,jdbcType=VARCHAR,mode=IN}, 
+            #{result,jdbcType=CURSOR,mode=OUT,javaType=ResultSet,resultMap=r_ApiDetail}
+        )}
+    </select>
+    
+</mapper>

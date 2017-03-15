@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:review xmlns:ns="http://reviewclipse.org/model/xml">
+  <period startDate="2016-08-09T17:02:41.510+08:00">
+    <assignment>
+      <author>batman</author>
+      <reviewer>taowenkang</reviewer>
+      <filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </assignment>
+    <assignment>
+      <author>caomengnan</author>
+      <reviewer>taowenkang</reviewer>
+      <filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </assignment>
+    <assignment>
+      <author>gzq</author>
+      <reviewer>taowenkang</reviewer>
+      <filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </assignment>
+    <assignment>
+      <author>niyi</author>
+      <reviewer>taowenkang</reviewer>
+      <filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </assignment>
+    <assignment>
+      <author>wangbeibei</author>
+      <reviewer>taowenkang</reviewer>
+      <filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </assignment>
+  </period>
+  <user name="taowenkang"/>
+  <user name="caomengnan"/>
+  <user name="wangbeibei"/>
+  <user name="batman"/>
+  <user name="niyi"/>
+  <user name="gzq"/>
+</ns:review>

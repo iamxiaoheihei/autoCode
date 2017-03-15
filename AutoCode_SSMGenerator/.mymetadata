@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="AutoCode_SSMGenerator"
+  id="myeclipse.1450677651262"
+  context-root="/AutoCode_SSMGenerator"
+  j2ee-spec="5.0"
+  archive="AutoCode_SSMGenerator.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

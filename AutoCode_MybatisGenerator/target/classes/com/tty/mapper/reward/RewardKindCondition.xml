@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tty.reward.dao.RewardKindConditionDao" >
+    <resultMap id="r_RewardKindCondition" type="RewardKindCondition" >
+        <id column="REWARD_KIND_CONDITION_ID" property="rewardKindConditionId" jdbcType="VARCHAR" />
+        <result column="REWARD_KIND_CONDITION_MAP_ID" property="rewardKindConditionMapId" jdbcType="VARCHAR" />
+        <result column="LOWER_NUMBER_LIMIT" property="lowerNumberLimit" jdbcType="DECIMAL" />
+        <result column="UPPER_NUMBER_LIMIT" property="upperNumberLimit" jdbcType="DECIMAL" />
+        <result column="UPPER_USE_AMOUNT" property="upperUseAmount" jdbcType="DECIMAL" />
+    </resultMap>
+
+    <select id="selectRewardKindConditionById" statementType="CALLABLE" parameterType="RewardKindCondition" >
+        <!-- 获取一条RewardKindCondition的数据 -->
+        {call P_REWARD_KIND_CONDITION_SEL_ID (
+            #{rewardKindConditionId,jdbcType=VARCHAR,mode=INOUT},
+            #{rewardKindConditionMapId,jdbcType=VARCHAR,mode=OUT},
+            #{lowerNumberLimit,jdbcType=DECIMAL,mode=OUT},
+            #{upperNumberLimit,jdbcType=DECIMAL,mode=OUT},
+            #{upperUseAmount,jdbcType=DECIMAL,mode=OUT}
+        )}
+    </select>
+
+    <select id="deleteRewardKindCondition" statementType="CALLABLE" parameterType="RewardKindCondition" >
+        <!-- 删除一条RewardKindCondition数据 -->
+        {call P_REWARD_KIND_CONDITION_DEL(
+            #{rewardKindConditionId,jdbcType=VARCHAR,mode=IN},
+            #{returnFlag,jdbcType=INTEGER,mode=OUT},
+            #{returnMsg,jdbcType=VARCHAR,mode=OUT}
+        )}
+    </select>
+
+    <select id="insertRewardKindCondition" statementType="CALLABLE" parameterType="RewardKindCondition" >
+        <!-- 添加一条RewardKindCondition的数据 -->
+        {call P_REWARD_KIND_CONDITION_INST (
+            #{rewardKindConditionId,jdbcType=VARCHAR,mode=IN},
+            #{rewardKindConditionMapId,jdbcType=VARCHAR,mode=IN},
+            #{lowerNumberLimit,jdbcType=DECIMAL,mode=IN},
+            #{upperNumberLimit,jdbcType=DECIMAL,mode=IN},
+            #{upperUseAmount,jdbcType=DECIMAL,mode=IN},
+            #{returnFlag,jdbcType=INTEGER,mode=OUT},
+            #{returnMsg,jdbcType=VARCHAR,mode=OUT}
+        )}
+    </select>
+
+    <select id="selectRewardKindCondition" statementType="CALLABLE" parameterType="map" >
+        <!-- 获取RewardKindCondition分页-->
+        {call P_REWARD_KIND_CONDITION_SEL_PAGE (
+            #{pageSize,jdbcType=INTEGER,mode=IN},
+            #{pageIndex,jdbcType=INTEGER,mode=IN},
+            #{count,jdbcType=INTEGER,mode=OUT},
+            #{result,jdbcType=CURSOR,mode=OUT,javaType=ResultSet,resultMap=r_RewardKindCondition}
+        )}
+    </select>
+
+    <select id="updateRewardKindCondition" statementType="CALLABLE" parameterType="RewardKindCondition" >
+        <!-- 修改一条RewardKindCondition的数据 -->
+        {call P_REWARD_KIND_CONDITION_UPD (
+            #{rewardKindConditionId,jdbcType=VARCHAR,mode=IN},
+            #{rewardKindConditionMapId,jdbcType=VARCHAR,mode=IN},
+            #{lowerNumberLimit,jdbcType=DECIMAL,mode=IN},
+            #{upperNumberLimit,jdbcType=DECIMAL,mode=IN},
+            #{upperUseAmount,jdbcType=DECIMAL,mode=IN},
+            #{returnFlag,jdbcType=INTEGER,mode=OUT},
+            #{returnMsg,jdbcType=VARCHAR,mode=OUT}
+        )}
+    </select>
+
+</mapper>

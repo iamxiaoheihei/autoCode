@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <!DOCTYPE generatorConfiguration
+      PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+      "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+     
+    <generatorConfiguration>
+    <!--本处进行本地数据库驱动jar的替换 -->
+      <classPathEntry location="E:\mavenRepo\com\oracle\ojdbc14\10.2.0.2.0\ojdbc14-10.2.0.2.0.jar" />
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+       <commentGenerator>
+        <property name="suppressAllComments" value="false"/>
+    </commentGenerator>
+     <!-- 本处进行数据库的修改 -->
+    <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+            connectionURL="jdbc:oracle:thin:@192.168.14.252:1521:db_main"
+            userId="new_tty_test"
+            password="sinzeIT2016">
+           <property name="remarksReporting" value="true"></property>
+     </jdbcConnection>
+       
+      <javaTypeResolver>
+         <property name="forceBigDecimals" value="false"/>
+      </javaTypeResolver>
+      
+      <!-- 每次只能生成一个model包和一个xml包 -->
+      <!-- targetPackage配置生成的model包名          targetPackage配置生成的model包的位置 -->
+    <javaModelGenerator targetPackage="com.tty.reward.model" targetProject="src/main/java">
+          <property name="enableSubPackages" value="true"/>
+          <property name="trimStrings" value="true"/>
+      </javaModelGenerator>
+      
+      <!-- targetPackage配置生成的xml包名          targetPackage配置生成的xml包的位置 -->
+      <sqlMapGenerator targetPackage="com.tty.mapper.reward" targetProject="src/main/java">
+         <property name="enableSubPackages" value="true"/> 
+     </sqlMapGenerator> 
+        
+      <!--可同时生成多张表对应文件 -->
+     <table tableName="REWARD_KIND_CONDITION" domainObjectName="RewardKindCondition"         
+      enableCountByExample="false" enableSelectByExample="false" 
+      enableUpdateByExample="false" enableDeleteByExample="false">
+      </table>
+      
+    </context>
+      
+</generatorConfiguration>
+
+

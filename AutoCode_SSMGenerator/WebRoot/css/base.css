@@ -1,0 +1,612 @@
+@CHARSET "UTF-8";
+/* 
+	TTY 后台使用的主要颜色
+	文字颜色：585858
+	链接颜色：2a7cbd
+	绿色按钮：87b97e 629b58
+	蓝色按钮：6eb3e1 4e99c7
+	黄色按钮：ffb752 e59728
+	红色按钮：d15a46 b74634
+	banner背景色：428fb9
+	banner按钮深蓝：3c7ea7
+	banner按钮浅蓝：62a9d1
+*/
+/* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+body{
+	background-color:white;
+	font-family:Tahoma;
+	font-size: 14px;
+	line-height:1.45;
+}
+/* 列表radio的div */
+.list-btn{
+	margin:0;
+	padding-left:5px;
+	padding-right:5px;
+	font-size:12px;
+}
+.list-check-div{
+	margin-top:2px;
+}
+.list-check-label{
+	margin-top:10px;
+}
+/* 普通按钮宽度 */
+.btn-common{
+	width:120px;
+}
+/* 普通录入框宽度 */
+.input-common{
+	width:200px;
+}
+/* 白色背景 */
+.body-white{
+	background-color:white;
+}
+.text-system{
+	color:#6699bb;
+}
+/* 个人资料 */
+.table-profile{
+	 border:1px solid #e2edf7;
+	 width:100%;
+	 margin-top:20px;
+}
+.td-profile-title{
+	height:35px;
+	font-size:13px;
+	width:140px;
+	background-color:#e2edf7;
+	border-bottom:1px solid #ffffff;
+	padding:10px 15px;
+}
+.td-profile-content{
+	font-size:13px;
+	color:grey;
+	border-bottom:1px solid #e2edf7;
+	padding:10px 15px;
+}
+/* 顶部导航栏 */
+.banner-navbar.navbar{
+	background-color:#428fb9;
+	height:50px;
+	margin:0px;
+}
+.banner-navbar .badge{
+	background-color:#d15a46;
+}
+.navbar-brand-item{
+	margin:0px;
+	height:50px;
+	padding-top:10px;
+}
+.banner-profile{
+	background-color:#62a9d1;
+	width:170px;
+	padding:0;
+	margin:0px;
+	height:50px;
+}
+.navbar-right-item{
+	margin:0px;
+	height:50px;
+	padding-top:14px;
+}
+.banner-profile-img{
+	height:42px;
+	width:42px;
+	margin-left:10px;
+	margin-top:3px;
+	float:left;
+	border:1px solid #dddddd;
+}
+.banner-profile-name{
+	padding:3px;
+	float:left;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+/* 顶部模块栏 */
+.top-menu{
+	margin:0;
+	height:60px;
+	background-color:#eeeeee;
+	font-size: 13px;
+}
+
+.top-menu-div{
+	background-color:#eeeeee;
+	height:64px;	
+	border-bottom:2px solid #428fb9;
+	border-top:2px solid #dddddd;
+}
+.top-menu a{
+	height:60px;
+}
+.top-item{
+	height:63px;
+	color:#585858;
+	border-top:2px solid #dddddd;
+	border-left:1px solid #dddddd;
+	border-right:1px solid #dddddd;
+	border-bottom:2px solid #3399cc;
+	background-color:#eeeeee;
+	margin-top:-2px;
+}
+.top-item-disabled{
+	height:63px;
+	color:#585858;
+	border-top:2px solid #dddddd;
+	border-left:1px solid #dddddd;
+	border-right:1px solid #dddddd;
+	border-bottom:2px solid #3399cc;
+	background-color:#eeeeee;
+	margin-top:-2px;
+}
+.top-item:hover{
+	height:63px;
+	color:#428fb9;
+	background-color:#ffffff;
+	border-top:2px solid #428fb9;
+	border-left:1px dotted #428fb9;
+	border-right:1px dotted #428fb9;
+	border-bottom:2px solid #428fb9;
+	margin-top:-2px;
+}
+.top-item-active{
+	height:63px;
+	color:#428fb9;
+	background-color:#ffffff;
+	border-top:2px solid #3399cc;
+	border-left:1px solid #3399cc;
+	border-right:1px solid #3399cc;
+	border-bottom:2px solid #ffffff;
+	margin-top:-2px;
+}
+.top-menu button{
+	height:35px;
+	width:40px;
+	margin-top:0;
+	padding:0;
+}
+
+/* 左边导航栏 */
+.left-menu{
+	width:200px;
+}
+
+.left-menu .panel{
+	padding:0;
+}
+.left-menu .panel-heading{
+	padding:0;
+}
+
+.left-menu .panel-body{
+	padding:0;
+	width:100%;
+}
+
+.left-menu .btn-group{
+	margin:0;
+	width:100%;
+	padding:0;
+}
+
+.left-menu a{
+	margin:0;
+	width:100%;
+}
+
+.left-menu i{
+	margin-top:4px;
+}
+.left-menu-item{
+	font-size:12px;
+	border-right:0px solid #6699cc;
+	border-bottom:1px solid #eeeeee;
+}
+.left-menu-item-active{
+	font-size:12px;
+	border-right:3px solid #6699cc;
+	border-bottom:1px solid #eeeeee;
+}
+
+/* 右边标签页 */
+.right-menu-tabs{
+	margin-top:10px;
+	margin-left:10px;
+	background-color:#4e99c7;
+}
+.right-menu-tabs li{
+	border-right:1px solid #eeeeee;
+}
+.right-menu-tabs>li.active{
+	background-color:#6eb3e1;
+}
+.right-menu-content{
+	margin-left:10px;
+	width:330px;
+	height:730px;
+}
+.right-menu-content div{
+	padding:0;
+}
+
+.right-menu-iframe{
+	border:0 solid black;
+	width:330px;
+	height:730px;
+}
+
+/* 空白页背景图片 */
+.desktop-img{
+	width:100%;
+	height:100%;
+	margin:0;
+}
+
+/* 照片墙 */
+.circle-hover{
+	cursor:pointer;
+	border:2px solid #cccccc;
+	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);	
+}
+
+.photowall{
+	position: relative;
+	margin-top:10px;
+	margin-left:30px;
+	height: 100%; 
+	width: 100%;
+
+	display: -webkit-box; /*使用CSS3的盒模型之流式布局*/
+	display: -moz-box;
+	display: box;
+
+	-webkit-box-pack:center; /*定义盒模型内部元素在水平方向上居于中间位置*/
+	-moz-box-pack:center;
+	-o-box-pack:center;
+	-ms-box-pack:center;
+	box-pack:center;
+
+	-webkit-box-align:center; /*定义盒模型内部元素在垂直方向上居于中间位置*/
+	-moz-box-align:center;
+	-o-box-align:center;
+	-ms-box-align:center;
+	box-align:center;
+}
+
+.photoview{
+	width:240px;
+	position: relative;
+	background-color:#f2eada;
+	margin: 5px;
+	padding:10px 10px 20px 10px;
+	text-align: center;
+	font-size:20px;
+	box-shadow:.2em .2em .8em #130c0e; /*给照片添加阴影效果，富有立体感*/
+}
+
+.photoview p{
+	margin-top:5px;  /*设置照片内显示文字段落的外上边距*/
+}
+
+	/* 设置右下角为旋转基准点
+	以右下角为基准点顺时针旋转10° */
+.photo01{
+	float:left;
+	-weikit-transform-origin:center; 
+	-moz-transform-origin:center;
+	-o-transform-origin:center;
+	-ms-transform-origin:center;
+	transform-origin:center;
+
+	transform:rotate(10deg); 
+	-webkit-transform:rotate(10deg);
+	-moz-transform:rotate(10deg);
+	-o-transform:rotate(10deg);
+	-ms-transform:rotate(10deg);
+}
+.photo02{
+	float:left;
+	margin-left:50px;
+	-weikit-transform-origin:center; /*设置右下角为旋转基准点 */
+	-moz-transform-origin:center;
+	-o-transform-origin:center;
+	-ms-transform-origin:center;
+	transform-origin:center;
+
+	transform:rotate(-20deg); /*以左上角为基准点顺时针旋转20°*/
+	-webkit-transform:rotate(-20deg);
+	-moz-transform:rotate(-20deg);
+	-o-transform:rotate(-20deg);
+	-ms-transform:rotate(-20deg);
+}
+
+.photo03{
+	float:left;
+	-weikit-transform-origin:center; /*设置左上角为旋转基准点 */
+	-moz-transform-origin:center;
+	-o-transform-origin:center;
+	-ms-transform-origin:center;
+	transform-origin:center;
+
+	transform:rotate(20deg); /*以左下角为基准点逆时针旋转20°*/
+	-webkit-transform:rotate(20deg);
+	-moz-transform:rotate(20deg);
+	-o-transform:rotate(20deg);
+	-ms-transform:rotate(20deg);
+}
+.photo04{
+	margin-left:50px;
+	float:left;
+	-weikit-transform-origin:center; /*设置左下角为旋转基准点 */
+	-moz-transform-origin:center;
+	-o-transform-origin:center;
+	-ms-transform-origin:center;
+	transform-origin:center;
+
+	transform:rotate(-10deg); /*以左上角为基准点顺时针旋转20°*/
+	-webkit-transform:rotate(-10deg);
+	-moz-transform:rotate(-10deg);
+	-o-transform:rotate(-10deg);
+	-ms-transform:rotate(-10deg);
+}
+
+
+/* 绿色按钮：87b97e 629b58 */
+.color-tty-green{
+	color: #87b97e;
+}
+.bg-tty-green{
+	background-color: #87b97e;
+}
+.color-tty-dark-green{
+	color: #629b58;
+}
+.btn-tty-green.btn-flat:not(.btn-link) {
+  color: #87b97e;
+}
+.btn-tty-green:not(.btn-link):not(.btn-flat) {
+  background-color: #87b97e;
+  color: rgba(255, 255, 255, 0.84);
+}
+.btn-tty-green:hover:not(.btn-link):not(.btn-flat) {
+  background-color: #629b58;
+}
+.btn-tty-green:active:not(.btn-link):not(.btn-flat) {
+  background-color: #629b58;
+}
+.btn-tty-green.btn-flat:hover:not(.btn-ink) {
+  background-color: rgba(135, 185, 126, 0.2);
+}
+.open > .dropdown-toggle.btn-tty-green {
+  background-color: #87b97e;
+}
+/* 蓝色按钮：6eb3e1 4e99c7 */
+.color-tty-blue{
+	color: #6eb3e1;
+}
+.bg-tty-blue{
+	background-color: #6eb3e1;
+}
+.panel-tty-blue > .panel-heading {
+  background-color: #6eb3e1;
+}
+.color-tty-dark-blue{
+	color: #4e99c7;
+}
+.btn-tty-blue.btn-flat:not(.btn-link) {
+  color: #6eb3e1;
+}
+.btn-tty-blue:not(.btn-link):not(.btn-flat) {
+  background-color: #6eb3e1;
+  color: rgba(255, 255, 255, 0.84);
+}
+.btn-tty-blue:hover:not(.btn-link):not(.btn-flat) {
+  background-color: #4e99c7;
+}
+.btn-tty-blue:active:not(.btn-link):not(.btn-flat) {
+  background-color: #4e99c7;
+}
+.btn-tty-blue.btn-flat:hover:not(.btn-ink) {
+  background-color: rgba(110, 179, 225, 0.2);
+}
+.open > .dropdown-toggle.btn-tty-blue {
+  background-color: #6eb3e1;
+}
+
+.btn-tty-link.btn-flat:not(.btn-link) {
+    color: #585858;
+}
+.btn-tty-link.btn-flat:hover:not(.btn-ink) {
+	color: #6eb3e1;
+    background-color: rgba(42, 124, 189, 0.2);
+}
+
+/* 黄色按钮：ffb752 e59728 */
+.color-tty-yellow{
+	color: #ffb752;
+}
+.bg-tty-yellow{
+	background-color: #ffb752;
+}
+.color-tty-dark-yellow{
+	color: #e59728;
+}
+.btn-tty-yellow.btn-flat:not(.btn-link) {
+  color: #ffb752;
+}
+.btn-tty-yellow:not(.btn-link):not(.btn-flat) {
+  background-color: #ffb752;
+  color: rgba(255, 255, 255, 0.84);
+}
+.btn-tty-yellow:hover:not(.btn-link):not(.btn-flat) {
+  background-color: #e59728;
+}
+.btn-tty-yellow:active:not(.btn-link):not(.btn-flat) {
+  background-color: #e59728;
+}
+.btn-tty-yellow.btn-flat:hover:not(.btn-ink) {
+  background-color: rgba(255, 183, 82, 0.2);
+}
+.open > .dropdown-toggle.btn-tty-yellow {
+  background-color: #ffb752;
+}
+/* 红色按钮：d15a46 b74634 */
+.color-tty-red{
+	color: #d15a46;
+}
+.bg-tty-red{
+	background-color: #d15a46;
+}
+.color-tty-dark-red{
+	color: #b74634;
+}
+.btn-tty-red.btn-flat:not(.btn-link) {
+  color: #d15a46;
+}
+.btn-tty-red:not(.btn-link):not(.btn-flat) {
+  background-color: #d15a46;
+  color: rgba(255, 255, 255, 0.84);
+}
+.btn-tty-red:hover:not(.btn-link):not(.btn-flat) {
+  background-color: #b74634;
+}
+.btn-tty-red:active:not(.btn-link):not(.btn-flat) {
+  background-color: #b74634;
+}
+.btn-tty-red.btn-flat:hover:not(.btn-ink) {
+  background-color: rgba(209, 90, 70, 0.2);
+}
+.open > .dropdown-toggle.btn-tty-red {
+  background-color: #d15a46;
+}
+/* 白色：ffffff eeeeee */
+.color-tty-white{
+	color: #585858;
+}
+.btn-tty-white.btn-flat:not(.btn-link) {
+  color: #585858;
+}
+.btn-tty-white:not(.btn-link):not(.btn-flat) {
+  background-color: #ffffff;
+  color: rgba(88, 88, 88, 0.84);
+}
+.btn-tty-white:hover:not(.btn-link):not(.btn-flat) {
+  background-color: #eeeeee;
+}
+.btn-tty-white:active:not(.btn-link):not(.btn-flat) {
+  background-color: #eeeeee;
+}
+.btn-tty-white.btn-flat:hover:not(.btn-ink) {
+  background-color: rgba(238, 238, 238, 0.2);
+}
+.open > .dropdown-toggle.btn-tty-white {
+  background-color: #ffffff;
+}
+/* 顶部公告自滚动 */
+.apple li{ 
+	list-style:none 
+}
+.apple{ 
+	height:50px; 
+	overflow:hidden; 
+	margin:-10px auto; 
+	border:0px solid #1B96EE;
+}
+.apple a{
+	width:100%; 
+	height:50px; 
+	line-height:50px; 
+	text-indent:20px; 
+	color:#eeeeee;
+}
+/* 天天易表格 */
+.table-panel{
+	width:97%;
+	margin-left:7px;
+	margin-top:0px;
+}
+.table-panel>.panel-body{
+	padding:0;
+}
+.table-tty{
+	margin:0;
+}
+.table-tty thead{ 
+	background-color:#6eb3e1;
+}
+.table-tty tr>:first-child{ 
+	padding-left:30px;
+}
+.th-tty{
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	letter-spacing: 2px;
+}
+.td-tty{
+	font-size:12px;
+	color:#393939;
+	cursor: pointer;
+}
+.tr-tty-active{
+	border-left:3px solid #629b58;
+}
+/* 天天易翻页 */
+.pager-tty{
+	height:50px;
+	font-size:12px;
+	padding:0;
+}
+.pager-tty-operation{
+	margin-top:7px;
+	margin-left:-15px;
+}
+.pager-tty-operation > button:first-child{
+	margin:3px 0 3px 30px;
+}
+.pager-tty-operation > button:not(first-child){
+	margin:3px;
+}
+.pager-tty-paging{
+	margin-top:4px;
+}
+.pager-tty-paging > .btn{
+	margin-top:5px;
+	color:grey;
+	padding-left:15px;
+	padding-right:15px;
+	font-size:15px;
+}
+.pager-tty-paging > span{
+	color:grey;border-left:1px solid #ffffff;border-right:1px solid #ffffff;padding:10px;
+}
+.pager-tty-number{
+	width:30px;text-align:center; border:1px solid #aaaaaa;padding-top:4px;padding-bottom:7px;
+}
+.pager-tty-info{
+	color:grey;
+	margin-top:15px;
+}
+/* 添加窗口 标签页 */
+.tab-insert{
+	background-color:#62a9d1;
+}
+.tab-insert>li{
+	border-right:1px solid #ffffff;
+}
+.tab-insert>li.active{
+	background-color:#3c7ea7;
+}
+
+/* 通用下拉框宽度 */
+.selectDiv{
+	width:200px;
+}
+
+
+.colorRed{color: red;}
